@@ -3,8 +3,9 @@ import pandas as pd
 import pickle
 
 # Load model dan scaler
-with open("random_forest_model.pkl", "rb") as model_file:
-    model = pickle.load(f)
+with open("random_forest_model.pkl", "rb") as f:
+    model = pickle.load(f)  # ← ternyata file ini isinya angka, bukan model
+
 
 with open("scaler.pkl", "rb") as scaler_file:
     scaler = pickle.load(scaler_file)
